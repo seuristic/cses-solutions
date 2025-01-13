@@ -3,17 +3,15 @@
 
 using namespace std;
 
-void permute(size_t index, string s, vector<string> &result) {
+void permute(size_t index, string s, set<string> &result) {
   if (index == s.length() - 1) {
-    result.push_back(s);
+    result.insert(s);
     return;
   }
 
   for (size_t i = index; i < s.length(); ++i) {
     swap(s[index], s[i]);
-
     permute(index + 1, s, result);
-
     swap(s[index], s[i]);
   }
 }
@@ -27,11 +25,8 @@ int main() {
 
   sort(s.begin(), s.end());
 
-  vector<string> result;
+  set<string> result;
   permute(0, s, result);
-
-  sort(result.begin(), result.end());
-  result.erase(unique(result.begin(), result.end()), result.end());
 
   cout << result.size() << endl;
   for (string s : result) {
