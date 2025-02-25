@@ -17,38 +17,29 @@ int main() {
   long long result = 0;
   map<long long, int> freq;
 
-  int prevR = -1;
-  int currL = 0, currR = 0;
-
-  while (currR < n) {
-    while (currR < n && (int)freq.size() <= k) {
-      ++freq[a[currR]];
-      ++currR;
+  int left = 0, right = 0;
+  int count_unique = 0;
+  while (right < n) {
+    ++freq[a[right]];
+    if (freq[a[right]] == 1) {
+      ++count_unique;
     }
-    if ((int)freq.size() > k) {
-      --currR;
-      --freq[a[currR]];
-    }
-
-    long long m = currR - currL;
-    result += m * (m + 1LL) / 2;
-    if (prevR > currL) {
-      m = prevR - currL;
-      result -= m * (m + 1LL) / 2;
-    }
-
-    prevR = currR;
-
-    while (currL < currR && (int)freq.size() > k) {
-      if (freq[a[currL]] == 1) {
-        freq.erase(a[currL]);
-      } else {
-        --freq[a[currL]];
+    if (count_unique > k) {
+      result += (right - left) * (right - left + 1LL) / 2;
+      while (left <= right && count_unique > k) {
+        --freq[a[left]];
+        if (freq[a[left]] == 0) {
+          --count_unique;
+        }
+        ++left;
       }
-      ++currL;
+      result -= (right - left) * (right - left + 1LL) / 2;
     }
+
+    ++right;
   }
 
+  result += (right - left) * (right - left + 1LL) / 2;
   cout << result << endl;
 
   return 0;
