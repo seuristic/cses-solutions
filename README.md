@@ -15,3 +15,4 @@ My Profile -> `https://cses.fi/user/302312`
 | [Minimal Grid Path](https://cses.fi/problemset/task/3359)          | DP               | [Solution](https://github.com/seuristic/cses-solutions/blob/main/minimal_grid_path.cpp)          |
 | [Labyrinth](https://cses.fi/problemset/task/1193)                  | bfs              | [Solution](https://github.com/seuristic/cses-solutions/blob/main/labyrinth.cpp)                  |
 | [Building Roads](https://cses.fi/problemset/task/1666)             | scc, dfs, graphs | [Solution](https://github.com/seuristic/cses-solutions/blob/main/building_roads.cpp)             |
+| [Message Route](https://cses.fi/problemset/task/1667)              | bfs              | [Solution](https://github.com/seuristic/cses-solutions/blob/main/message_route.cpp)              |
