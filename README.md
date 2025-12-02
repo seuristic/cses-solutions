@@ -19,3 +19,4 @@ My Profile -> `https://cses.fi/user/302312`
 | [Building Teams](https://cses.fi/problemset/task/1668)             | bipartite, dfs, bfs | [Solution](https://github.com/seuristic/cses-solutions/blob/main/building_teams.cpp)             |
 | [Round Trip](https://cses.fi/problemset/task/1669)                 | dfs, cycle          | [Solution](https://github.com/seuristic/cses-solutions/blob/main/round_trip.cpp)                 |
 | [Monsters](https://cses.fi/problemset/task/1194)                   | bfs                 | [Solution](https://github.com/seuristic/cses-solutions/blob/main/monsters.cpp)                   |
+| [Shortest Routes I](https://cses.fi/problemset/task/1671)          | dijkstra            | [Solution](https://github.com/seuristic/cses-solutions/blob/main/shortest_routes_i.cpp)          |
