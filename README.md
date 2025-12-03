@@ -20,3 +20,4 @@ My Profile -> `https://cses.fi/user/302312`
 | [Round Trip](https://cses.fi/problemset/task/1669)                 | dfs, cycle          | [Solution](https://github.com/seuristic/cses-solutions/blob/main/round_trip.cpp)                 |
 | [Monsters](https://cses.fi/problemset/task/1194)                   | bfs                 | [Solution](https://github.com/seuristic/cses-solutions/blob/main/monsters.cpp)                   |
 | [Shortest Routes I](https://cses.fi/problemset/task/1671)          | dijkstra            | [Solution](https://github.com/seuristic/cses-solutions/blob/main/shortest_routes_i.cpp)          |
+| [Shortest Routes II](https://cses.fi/problemset/task/1672)         | floyd-warshall      | [Solution](https://github.com/seuristic/cses-solutions/blob/main/shortest_routes_ii.cpp)         |
