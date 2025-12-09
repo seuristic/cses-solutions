@@ -23,3 +23,4 @@ My Profile -> `https://cses.fi/user/302312`
 | [Shortest Routes II](https://cses.fi/problemset/task/1672)         | floyd-warshall      | [Solution](https://github.com/seuristic/cses-solutions/blob/main/shortest_routes_ii.cpp)         |
 | [High Score](https://cses.fi/problemset/task/1673/)                | bellman-ford, dfs   | [Solution](https://github.com/seuristic/cses-solutions/blob/main/high_score.cpp)                 |
 | [Flight Discount](https://cses.fi/problemset/task/1195)            | dijkstra            | [Solution](https://github.com/seuristic/cses-solutions/blob/main/flight_discount.cpp)            |
+| [Cycle Finding](https://cses.fi/problemset/task/1197)              | bellman-ford        | [Solution](https://github.com/seuristic/cses-solutions/blob/main/cycle_finding.cpp)              |
