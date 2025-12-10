@@ -24,3 +24,4 @@ My Profile -> `https://cses.fi/user/302312`
 | [High Score](https://cses.fi/problemset/task/1673/)                | bellman-ford, dfs   | [Solution](https://github.com/seuristic/cses-solutions/blob/main/high_score.cpp)                 |
 | [Flight Discount](https://cses.fi/problemset/task/1195)            | dijkstra            | [Solution](https://github.com/seuristic/cses-solutions/blob/main/flight_discount.cpp)            |
 | [Cycle Finding](https://cses.fi/problemset/task/1197)              | bellman-ford        | [Solution](https://github.com/seuristic/cses-solutions/blob/main/cycle_finding.cpp)              |
+| [Flight Routes](https://cses.fi/problemset/task/1196)              | dijkstra            | [Solution](https://github.com/seuristic/cses-solutions/blob/main/flight_routes.cpp)              |
