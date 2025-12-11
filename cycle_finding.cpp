@@ -28,7 +28,7 @@ vector<int> parent;
 void solve() {
     cin >> n >> m;
 
-    dist.assign(n, INF);
+    dist.assign(n, 0);  // To detect negative cycles anywhere, we initialize all distances to 0 so that every node is "active".
     parent.assign(n, -1);
     edges.clear();
 
@@ -41,11 +41,9 @@ void solve() {
     }
 
     int x = -1;
-    dist[0] = 0;
     for (int i = 0; i < n; ++i) {
         x = -1;
         for (auto& [u, v, w] : edges) {
-            if (dist[u] == INF) continue;
             if (dist[u] + w < dist[v]) {
                 dist[v] = dist[u] + w;
                 parent[v] = u;
