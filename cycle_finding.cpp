@@ -1,9 +1,9 @@
 #include <algorithm>
 #include <bitset>
+#include <climits>
 #include <cmath>
 #include <deque>
 #include <iostream>
-#include <limits>
 #include <map>
 #include <queue>
 #include <set>
@@ -18,6 +18,8 @@ using namespace std;
 #define size(x) (int)(x).size()
 #define all(x) begin(x), end(x)
 
+const ll INF = LLONG_MAX;
+
 int n, m;
 vector<ll> dist;
 vector<tuple<int, int, ll>> edges;
@@ -26,7 +28,7 @@ vector<int> parent;
 void solve() {
     cin >> n >> m;
 
-    dist.assign(n, 0);
+    dist.assign(n, INF);
     parent.assign(n, -1);
     edges.clear();
 
@@ -39,9 +41,11 @@ void solve() {
     }
 
     int x = -1;
+    dist[0] = 0;
     for (int i = 0; i < n; ++i) {
         x = -1;
         for (auto& [u, v, w] : edges) {
+            if (dist[u] == INF) continue;
             if (dist[u] + w < dist[v]) {
                 dist[v] = dist[u] + w;
                 parent[v] = u;

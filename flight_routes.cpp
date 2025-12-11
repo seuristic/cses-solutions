@@ -19,6 +19,7 @@ using namespace std;
 
 const ll INF = LLONG_MAX;
 
+// APPROACH 1: using bellman-ford
 // void solve() {
 //     int n, m, k;
 //     cin >> n >> m >> k;
@@ -31,28 +32,25 @@ const ll INF = LLONG_MAX;
 //         adj[u].push_back({v, w});
 //     }
 
-//     vector<priority_queue<ll>> dist(n, priority_queue<ll>());
-//     for (int i = 0; i < n; ++i) {
-//         for (int j = 0; j < k; ++j) {
-//             dist[i].push(INF);
-//         }
-//     }
+//     vector<priority_queue<ll>> dist(n);
 
 //     priority_queue<pair<ll, int>, vector<pair<ll, int>>, greater<pair<ll, int>>> q;
 
 //     q.push({0, 0});
-//     dist[0].pop();
 //     dist[0].push(0);
 
 //     while (!q.empty()) {
 //         auto [d, u] = q.top();
 //         q.pop();
 
-//         if (d > dist[u].top()) continue;
+//         if (size(dist[u]) == k && d > dist[u].top()) continue;
 
 //         for (auto [v, w] : adj[u]) {
 //             ll newDist = d + w;
-//             if (newDist < dist[v].top()) {
+//             if (size(dist[v]) < k) {
+//                 dist[v].push(newDist);
+//                 q.push({newDist, v});
+//             } else if (newDist < dist[v].top()) {
 //                 dist[v].pop();
 //                 dist[v].push(newDist);
 //                 q.push({newDist, v});
@@ -74,7 +72,7 @@ const ll INF = LLONG_MAX;
 //     cout << endl;
 // }
 
-// OPTIMIZED APPROACH
+// APPROACH 2: using dijkstra (OPTIMIZED)
 void solve() {
     int n, m, k;
     cin >> n >> m >> k;
@@ -89,7 +87,7 @@ void solve() {
 
     priority_queue<pair<ll, int>, vector<pair<ll, int>>, greater<pair<ll, int>>> q;
     vector<ll> dist(k, INF);
-    vector<int> visited(n, 0);
+    vector<int> visit(n, 0);
 
     q.push({0, 0});
 
@@ -97,13 +95,13 @@ void solve() {
         auto [d, u] = q.top();
         q.pop();
 
-        if (visited[u] >= k) continue;
+        if (visit[u] >= k) continue;
 
         if (u == n - 1) {
-            dist[visited[u]] = d;
+            dist[visit[u]] = d;
         }
 
-        ++visited[u];
+        ++visit[u];
         for (auto [v, w] : adj[u]) {
             q.push({d + w, v});
         }
