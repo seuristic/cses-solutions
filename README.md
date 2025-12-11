@@ -5,8 +5,8 @@ My Profile -> `https://cses.fi/user/302312`
 
 | Problem                                                            | Approach            | Solution                                                                                         |
 | ------------------------------------------------------------------ | ------------------- | ------------------------------------------------------------------------------------------------ |
-| [Raab Game I](https://cses.fi/problemset/task/3399)                | general             | [Solution](https://github.com/seuristic/cses-solutions/blob/main/raab_game_i.cpp)                |
-| [Mex Grid Construction](https://cses.fi/problemset/task/3419)      | general, matrix     | [Solution](https://github.com/seuristic/cses-solutions/blob/main/mex_grid_construction.cpp)      |
+| [Raab Game I](https://cses.fi/problemset/task/3399)                | adhoc               | [Solution](https://github.com/seuristic/cses-solutions/blob/main/raab_game_i.cpp)                |
+| [Mex Grid Construction](https://cses.fi/problemset/task/3419)      | adhoc, matrix       | [Solution](https://github.com/seuristic/cses-solutions/blob/main/mex_grid_construction.cpp)      |
 | [Knight Moves Grid](https://cses.fi/problemset/task/3217)          | bfs                 | [Solution](https://github.com/seuristic/cses-solutions/blob/main/knight_moves_grid.cpp)          |
 | [Grid Coloring I](https://cses.fi/problemset/task/3311)            | brute force         | [Solution](https://github.com/seuristic/cses-solutions/blob/main/grid_coloring_i.cpp)            |
 | [String Reorder](https://cses.fi/problemset/task/1743)             | hashmaps, adhoc     | [Solution](https://github.com/seuristic/cses-solutions/blob/main/string_reorder.cpp)             |
@@ -23,5 +23,6 @@ My Profile -> `https://cses.fi/user/302312`
 | [Shortest Routes II](https://cses.fi/problemset/task/1672)         | floyd-warshall      | [Solution](https://github.com/seuristic/cses-solutions/blob/main/shortest_routes_ii.cpp)         |
 | [High Score](https://cses.fi/problemset/task/1673/)                | bellman-ford, dfs   | [Solution](https://github.com/seuristic/cses-solutions/blob/main/high_score.cpp)                 |
 | [Flight Discount](https://cses.fi/problemset/task/1195)            | dijkstra            | [Solution](https://github.com/seuristic/cses-solutions/blob/main/flight_discount.cpp)            |
-| [Cycle Finding](https://cses.fi/problemset/task/1197)              | bellman-ford        | [Solution](https://github.com/seuristic/cses-solutions/blob/main/cycle_finding.cpp)              |
+| [Cycle Finding](https://cses.fi/problemset/task/1197)              | bellman-ford, cycle | [Solution](https://github.com/seuristic/cses-solutions/blob/main/cycle_finding.cpp)              |
 | [Flight Routes](https://cses.fi/problemset/task/1196)              | dijkstra            | [Solution](https://github.com/seuristic/cses-solutions/blob/main/flight_routes.cpp)              |
+| [Round Trip II](https://cses.fi/problemset/task/1678)              | dfs, cycle          | [Solution](https://github.com/seuristic/cses-solutions/blob/main/round_trip_ii.cpp)              |
