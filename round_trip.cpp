@@ -22,17 +22,19 @@ bool dfs(int u, int p, const vector<vector<int>>& adj, vector<int>& visited, vec
 
     for (int v : adj[u]) {
         if (v == p) continue;
-        if (!visited[v]) {
-            parent[v] = u;
+        parent[v] = u;
+        if (visited[v] == 0) {
             if (dfs(v, u, adj, visited, parent)) return true;
         } else {
-            vector<int> cycle{v};
-            int curr = u;
-            while (curr != v) {
+            vector<int> cycle;
+            int curr = v;
+            while (true) {
                 cycle.push_back(curr);
+                if (curr == v && size(cycle) > 1) {
+                    break;
+                }
                 curr = parent[curr];
             }
-            cycle.push_back(v);
             reverse(all(cycle));
             cout << size(cycle) << endl;
             for (int x : cycle) {
@@ -42,6 +44,8 @@ bool dfs(int u, int p, const vector<vector<int>>& adj, vector<int>& visited, vec
             return true;
         }
     }
+
+    visited[u] = 2;
 
     return false;
 }
@@ -59,7 +63,7 @@ void solve() {
 
     vector<int> visited(n + 1, 0), parent(n + 1, -1);
     for (int i = 1; i <= n; ++i) {
-        if (visited[i]) continue;
+        if (visited[i] == 2) continue;
         if (dfs(i, -1, adj, visited, parent)) {
             return;
         }
