@@ -22,30 +22,105 @@ using ll = long long;
 
 const int NEG_INF = INT_MIN;
 
-int n, m;
-vector<vector<int>> adj, radj;
-vector<int> dist, parent, ts, path;
-vector<bool> visited;
+// APPROACH 1: topo sort with dp
+// int n, m;
+// vector<vector<int>> adj, radj;
+// vector<int> dist, parent, ts, path;
+// vector<bool> visited;
 
-void dfs(int u) {
+// void dfs(int u) {
+//     visited[u] = true;
+//     for (int v : adj[u]) {
+//         if (!visited[v]) {
+//             dfs(v);
+//         }
+//     }
+//     ts.push_back(u);
+// }
+
+// void solve() {
+//     cin >> n >> m;
+
+//     adj.assign(n, {});
+//     radj.assign(n, {});
+//     dist.assign(n, NEG_INF);
+//     parent.assign(n, -1);
+//     visited.assign(n, 0);
+//     ts.clear();
+//     path.clear();
+
+//     for (int i = 0; i < m; ++i) {
+//         int u, v;
+//         cin >> u >> v;
+//         --u, --v;
+//         adj[u].push_back(v);
+//         radj[v].push_back(u);
+//     }
+
+//     dfs(0);
+//     reverse(all(ts));
+
+//     dist[0] = 1;
+//     for (int v : ts) {
+//         for (int u : radj[v]) {
+//             if (dist[u] == NEG_INF) continue;
+//             if (dist[u] + 1 > dist[v]) {
+//                 dist[v] = dist[u] + 1;
+//                 parent[v] = u;
+//             }
+//         }
+//     }
+
+//     if (dist[n - 1] == NEG_INF) {
+//         cout << "IMPOSSIBLE" << endl;
+//         return;
+//     }
+
+//     int curr = n - 1;
+//     path.push_back(curr);
+//     while (curr != 0) {
+//         curr = parent[curr];
+//         path.push_back(curr);
+//     }
+
+//     reverse(all(path));
+
+//     cout << size(path) << endl;
+//     for (int p : path) {
+//         cout << p + 1 << ' ';
+//     }
+//     cout << endl;
+// }
+
+// APPROACH 2: using dp directly inside dfs on dag
+int n, m;
+vector<vector<int>> adj;
+vector<bool> visited;
+vector<ll> dist;
+vector<int> parent, path;
+
+ll dfs(int u) {
+    if (visited[u]) return dist[u];
     visited[u] = true;
+    if (u == n - 1) return dist[u] = 1;
     for (int v : adj[u]) {
-        if (!visited[v]) {
-            dfs(v);
+        dfs(v);
+        if (dist[v] == NEG_INF) continue;
+        if (dist[u] < 1 + dist[v]) {
+            dist[u] = 1 + dist[v];
+            parent[u] = v;
         }
     }
-    ts.push_back(u);
+    return dist[u];
 }
 
 void solve() {
     cin >> n >> m;
 
     adj.assign(n, {});
-    radj.assign(n, {});
+    visited.assign(n, false);
     dist.assign(n, NEG_INF);
     parent.assign(n, -1);
-    visited.assign(n, 0);
-    ts.clear();
     path.clear();
 
     for (int i = 0; i < m; ++i) {
@@ -53,38 +128,19 @@ void solve() {
         cin >> u >> v;
         --u, --v;
         adj[u].push_back(v);
-        radj[v].push_back(u);
     }
 
-    dfs(0);
-    reverse(all(ts));
-
-    dist[0] = 1;
-    for (int v : ts) {
-        for (int u : radj[v]) {
-            if (dist[u] == NEG_INF) continue;
-            if (dist[u] + 1 > dist[v]) {
-                dist[v] = dist[u] + 1;
-                parent[v] = u;
-            }
-        }
-    }
-
-    if (dist[n - 1] == NEG_INF) {
+    if (dfs(0) == NEG_INF) {
         cout << "IMPOSSIBLE" << endl;
         return;
     }
 
-    int curr = n - 1;
-    path.push_back(curr);
-    while (curr != 0) {
-        curr = parent[curr];
+    cout << dfs(0) << endl;
+    int curr = 0;
+    while (curr != -1) {
         path.push_back(curr);
+        curr = parent[curr];
     }
-
-    reverse(all(path));
-
-    cout << size(path) << endl;
     for (int p : path) {
         cout << p + 1 << ' ';
     }
