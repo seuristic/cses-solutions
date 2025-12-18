@@ -29,3 +29,4 @@ My Profile -> `https://cses.fi/user/302312`
 | [Course Schedule](https://cses.fi/problemset/task/1679)            | topological sort     | [Solution](https://github.com/seuristic/cses-solutions/blob/main/course_schedule.cpp)            |
 | [Longest Flight Route](https://cses.fi/problemset/task/1680)       | dp, dfs, dag         | [Solution](https://github.com/seuristic/cses-solutions/blob/main/longest_flight_route.cpp)       |
 | [Game Routes](https://cses.fi/problemset/task/1681)                | dp, dfs, dag         | [Solution](https://github.com/seuristic/cses-solutions/blob/main/game_routes.cpp)                |
+| [Investigation](https://cses.fi/problemset/task/1202)              | dp, dijkstra         | [Solution](https://github.com/seuristic/cses-solutions/blob/main/investigation.cpp)              |
