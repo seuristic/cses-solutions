@@ -31,3 +31,4 @@ My Profile -> `https://cses.fi/user/302312`
 | [Game Routes](https://cses.fi/problemset/task/1681)                | dp, dfs, dag         | [Solution](https://github.com/seuristic/cses-solutions/blob/main/game_routes.cpp)                |
 | [Investigation](https://cses.fi/problemset/task/1202)              | dp, dijkstra         | [Solution](https://github.com/seuristic/cses-solutions/blob/main/investigation.cpp)              |
 | [Planets Queries I](https://cses.fi/problemset/task/1750)          | succ, binary lifting | [Solution](https://github.com/seuristic/cses-solutions/blob/main/planets_queries_i.cpp)          |
+| [Road Reparation](https://cses.fi/problemset/task/1675)            | mst, kruskal         | [Solution](https://github.com/seuristic/cses-solutions/blob/main/road_reparation.cpp)            |
