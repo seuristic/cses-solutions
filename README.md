@@ -9,8 +9,8 @@ My Profile -> `https://cses.fi/user/302312`
 | [Mex Grid Construction](https://cses.fi/problemset/task/3419)      | adhoc, matrix        | [Solution](https://github.com/seuristic/cses-solutions/blob/main/mex_grid_construction.cpp)      |
 | [Knight Moves Grid](https://cses.fi/problemset/task/3217)          | bfs                  | [Solution](https://github.com/seuristic/cses-solutions/blob/main/knight_moves_grid.cpp)          |
 | [Grid Coloring I](https://cses.fi/problemset/task/3311)            | brute force          | [Solution](https://github.com/seuristic/cses-solutions/blob/main/grid_coloring_i.cpp)            |
-| [String Reorder](https://cses.fi/problemset/task/1743)             | hashtable, adhoc     | [Solution](https://github.com/seuristic/cses-solutions/blob/main/string_reorder.cpp)             |
-| [Distinct Values Subarrays](https://cses.fi/problemset/task/3420)  | hashtable, 2-pointer | [Solution](https://github.com/seuristic/cses-solutions/blob/main/distinct_values_subarrays.cpp)  |
+| [String Reorder](https://cses.fi/problemset/task/1743)             | hashmap, adhoc       | [Solution](https://github.com/seuristic/cses-solutions/blob/main/string_reorder.cpp)             |
+| [Distinct Values Subarrays](https://cses.fi/problemset/task/3420)  | hashmap, 2-pointer   | [Solution](https://github.com/seuristic/cses-solutions/blob/main/distinct_values_subarrays.cpp)  |
 | [Longest Common Subsequence](https://cses.fi/problemset/task/3403) | dp                   | [Solution](https://github.com/seuristic/cses-solutions/blob/main/longest_common_subsequence.cpp) |
 | [Minimal Grid Path](https://cses.fi/problemset/task/3359)          | dp                   | [Solution](https://github.com/seuristic/cses-solutions/blob/main/minimal_grid_path.cpp)          |
 | [Labyrinth](https://cses.fi/problemset/task/1193)                  | bfs                  | [Solution](https://github.com/seuristic/cses-solutions/blob/main/labyrinth.cpp)                  |
@@ -31,4 +31,5 @@ My Profile -> `https://cses.fi/user/302312`
 | [Game Routes](https://cses.fi/problemset/task/1681)                | dp, dfs, dag         | [Solution](https://github.com/seuristic/cses-solutions/blob/main/game_routes.cpp)                |
 | [Investigation](https://cses.fi/problemset/task/1202)              | dp, dijkstra         | [Solution](https://github.com/seuristic/cses-solutions/blob/main/investigation.cpp)              |
 | [Planets Queries I](https://cses.fi/problemset/task/1750)          | succ, binary lifting | [Solution](https://github.com/seuristic/cses-solutions/blob/main/planets_queries_i.cpp)          |
-| [Road Reparation](https://cses.fi/problemset/task/1675)            | mst, kruskal         | [Solution](https://github.com/seuristic/cses-solutions/blob/main/road_reparation.cpp)            |
+| [Road Reparation](https://cses.fi/problemset/task/1675)            | mst, kruskal, dsu    | [Solution](https://github.com/seuristic/cses-solutions/blob/main/road_reparation.cpp)            |
+| [Road Construction](https://cses.fi/problemset/task/1676)          | dsu                  | [Solution](https://github.com/seuristic/cses-solutions/blob/main/road_construction.cpp)          |
