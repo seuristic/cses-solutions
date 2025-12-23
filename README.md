@@ -34,3 +34,4 @@ My Profile -> `https://cses.fi/user/302312`
 | [Road Reparation](https://cses.fi/problemset/task/1675)            | mst, kruskal, dsu    | [Solution](https://github.com/seuristic/cses-solutions/blob/main/road_reparation.cpp)            |
 | [Road Construction](https://cses.fi/problemset/task/1676)          | dsu                  | [Solution](https://github.com/seuristic/cses-solutions/blob/main/road_construction.cpp)          |
 | [Flight Routes Check](https://cses.fi/problemset/task/1682)        | scc, dfs             | [Solution](https://github.com/seuristic/cses-solutions/blob/main/flight_routes_check.cpp)        |
+| [Planets and Kingdoms](https://cses.fi/problemset/task/1683)       | scc, kosaraju        | [Solution](https://github.com/seuristic/cses-solutions/blob/main/planets_and_kingdoms.cpp)       |
