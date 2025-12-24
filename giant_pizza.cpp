@@ -47,29 +47,37 @@ void dfs2(int u, int id) {
 void solve() {
     cin >> n >> m;
 
-    adj.assign(n, {});
-    radj.assign(n, {});
+    adj.assign(2 * m, {});
+    radj.assign(2 * m, {});
     ts.clear();
-    component.assign(n, -1);
+    component.assign(2 * m, -1);
 
-    for (int i = 0; i < m; i++) {
+    for (int i = 0; i < n; i++) {
+        char c1, c2;
         int u, v;
-        cin >> u >> v;
+        cin >> c1 >> u >> c2 >> v;
         --u, --v;
-        adj[u].push_back(v);
-        radj[v].push_back(u);
+        if (c1 == '-') u += m;
+        if (c2 == '-') v += m;
+
+        int nu = (u < m) ? u + m : u - m;
+        int nv = (v < m) ? v + m : v - m;
+
+        adj[nu].push_back(v);
+        radj[v].push_back(nu);
+        adj[nv].push_back(u);
+        radj[u].push_back(nv);
     }
 
-    visited.assign(n, false);
-    for (int i = 0; i < n; i++) {
+    visited.assign(2 * m, false);
+    for (int i = 0; i < 2 * m; i++) {
         if (!visited[i]) {
             dfs1(i);
         }
     }
 
     reverse(all(ts));
-
-    visited.assign(n, false);
+    visited.assign(2 * m, false);
     int components = 0;
     for (int node : ts) {
         if (!visited[node]) {
@@ -77,9 +85,20 @@ void solve() {
         }
     }
 
-    cout << components << endl;
-    for (int i = 0; i < n; i++) {
-        cout << component[i] << " ";
+    for (int i = 0; i < m; i++) {
+        if (component[i] == component[i + m]) {
+            cout << "IMPOSSIBLE" << endl;
+            return;
+        }
+    }
+
+    vector<int> result(m);
+    for (int i = 0; i < m; i++) {
+        result[i] = (component[i] > component[i + m]) ? 1 : -1;
+    }
+
+    for (int i = 0; i < m; i++) {
+        cout << (result[i] == 1 ? '+' : '-') << " ";
     }
     cout << endl;
 }

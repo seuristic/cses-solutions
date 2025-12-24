@@ -35,3 +35,4 @@ My Profile -> `https://cses.fi/user/302312`
 | [Road Construction](https://cses.fi/problemset/task/1676)          | dsu                  | [Solution](https://github.com/seuristic/cses-solutions/blob/main/road_construction.cpp)          |
 | [Flight Routes Check](https://cses.fi/problemset/task/1682)        | scc, dfs             | [Solution](https://github.com/seuristic/cses-solutions/blob/main/flight_routes_check.cpp)        |
 | [Planets and Kingdoms](https://cses.fi/problemset/task/1683)       | scc, kosaraju        | [Solution](https://github.com/seuristic/cses-solutions/blob/main/planets_and_kingdoms.cpp)       |
+| [Giant Pizza](https://cses.fi/problemset/task/1684/)               | scc, 2-sat, kosaraju | [Solution](https://github.com/seuristic/cses-solutions/blob/main/giant_pizza.cpp)                |
