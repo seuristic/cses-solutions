@@ -36,3 +36,4 @@ My Profile -> `https://cses.fi/user/302312`
 | [Flight Routes Check](https://cses.fi/problemset/task/1682)        | scc, dfs             | [Solution](https://github.com/seuristic/cses-solutions/blob/main/flight_routes_check.cpp)        |
 | [Planets and Kingdoms](https://cses.fi/problemset/task/1683)       | scc, kosaraju        | [Solution](https://github.com/seuristic/cses-solutions/blob/main/planets_and_kingdoms.cpp)       |
 | [Giant Pizza](https://cses.fi/problemset/task/1684/)               | scc, 2-sat, kosaraju | [Solution](https://github.com/seuristic/cses-solutions/blob/main/giant_pizza.cpp)                |
+| [Coin Collector](https://cses.fi/problemset/task/1686)             | scc, dp, kosaraju    | [Solution](https://github.com/seuristic/cses-solutions/blob/main/coin_collector.cpp)             |
