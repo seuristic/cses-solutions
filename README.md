@@ -38,3 +38,4 @@ My Profile -> `https://cses.fi/user/302312`
 | [Giant Pizza](https://cses.fi/problemset/task/1684/)               | scc, 2-sat, kosaraju | [Solution](https://github.com/seuristic/cses-solutions/blob/main/giant_pizza.cpp)                |
 | [Coin Collector](https://cses.fi/problemset/task/1686)             | scc, dp, kosaraju    | [Solution](https://github.com/seuristic/cses-solutions/blob/main/coin_collector.cpp)             |
 | [Mail Delivery](https://cses.fi/problemset/task/1691)              | eulerian path, dfs   | [Solution](https://github.com/seuristic/cses-solutions/blob/main/mail_delivery.cpp)              |
+| [De Bruijn Sequence](https://cses.fi/problemset/task/1692)         | eulerian path, dfs   | [Solution](https://github.com/seuristic/cses-solutions/blob/main/de_bruijn_sequence.cpp)         |
